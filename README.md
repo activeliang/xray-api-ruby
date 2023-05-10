@@ -2,7 +2,16 @@
 
 使用方法: 
 
-> 直接看example.rb内的示例。
+> 可直接看example.rb内的示例。
+```
+# 调用示例：
+client = XrayApi.new host: '127.0.0.1', port: 9001
+puts client.query_traffic
+puts client.add_ss_user 'ss-inbound', 'password1', 'myemail'
+puts client.add_vmess_user 'vmess-inbound', '756c0b6f-a5c5-4d6b-bbb0-a2197dce9f1e', 'myemail'
+puts client.remove_user 'ss-inbound', 'myemail'
+puts client.remove_user 'vmess-inbound', 'myemail'
+```
 
 如何基于ruby实现的（Mac端）：
 
